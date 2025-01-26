@@ -61,11 +61,11 @@ with st.expander('Input features'):
 # Data preparation
 # Encode X
 encode = ['island', 'sex']
-df_penguins = pd.get_dummies(x_raw, prefix=encode)
+df_penguins = pd.get_dummies(input_penguins, prefix=encode)
 
 X = df_penguins[:]
 #X
-input_row = df_penguins[:0]
+input_row = df_penguins[:1]
 
 # Encode y
 target_mapper = {'Adelie': 0,
@@ -81,6 +81,17 @@ with st.expander('Data preparation'):
   input_row
   st.write('**Encoded y**')
   y
+
+
+# Model training and inference
+## Train the ML model
+clf = RandomForestClassifier()
+clf.fit(X, y)
+
+## Apply model to make predictions
+prediction = clf.predict(input_row)
+prediction
+#prediction_proba = clf.predict_proba(input_row)
 
 
 
