@@ -40,6 +40,17 @@ with st.sidebar:
   flipper_length_mm = st.slider("What is the length of the penguin's flipper in millimeters?", 172.0, 231.0, 201.0)
   body_mass_g = st.slider("What is the body mass of the penguin in grams?", 2700.0, 6300.0, 4207.0)
   
+   # Create a DataFrame for the input features
+  data = {'island': island,
+          'bill_length_mm': bill_length_mm,
+          'bill_depth_mm': bill_depth_mm,
+          'flipper_length_mm': flipper_length_mm,
+          'body_mass_g': body_mass_g,
+          'sex': gender}
+  input_df = pd.DataFrame(data, index=[0])
+  #input_penguins = pd.concat([input_df, X_raw], axis=0)
+
+input_df
 
 
 
