@@ -38,7 +38,7 @@ with st.sidebar:
   bill_length_mm = st.slider("What is the length of the penguin's bill in millimeters?", 32.10, 59.6, 43.9)
   bill_depth_mm = st.slider("What is the depth of the penguin's bill in millimeters?", 13.10, 21.50, 17.20)
   flipper_length_mm = st.slider("What is the length of the penguin's flipper in millimeters?", 172.0, 231.0, 201.0)
-  body_mass_g = st.slider("What is the body mass of the penguin in grams?", 2700, 6300, 4207)
+  body_mass_g = st.slider("What is the body mass of the penguin in grams?", 2700.0, 6300.0, 4207)
   
 
 
