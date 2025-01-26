@@ -65,7 +65,7 @@ df_penguins = pd.get_dummies(x_raw, prefix=encode)
 
 X = df_penguins[:]
 #X
-input_row = df_penguins[:1]
+input_row = df_penguins[:0]
 
 # Encode y
 target_mapper = {'Adelie': 0,
